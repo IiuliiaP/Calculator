@@ -5,109 +5,146 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/ic_launcher_foreground"
-    android:columnCount="3"
-    tools:context=".MainActivity">
+    android:columnCount="4"
+    tools:context=".CalculatorActivity">
 
-    <Button
+    <TextView
+        android:id="@+id/result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_columnWeight="1"
-        android:text="@string/multiplier" />
+        android:layout_columnSpan="4"
+        android:layout_marginTop="@dimen/margin_top"
+        android:textSize="@dimen/result_size"
+        android:layout_gravity="fill_horizontal"
+        android:paddingVertical="@dimen/padding_text"
+        android:gravity="end"/>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/key7"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/button_height"
         android:layout_columnWeight="1"
-        android:text="@string/division" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_columnWeight="1"
-        android:text="@string/minus" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_columnWeight="1"
+        android:onClick="appendText"
         android:text="@string/key7" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/key8"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/button_height"
         android:layout_columnWeight="1"
+        android:onClick="appendText"
         android:text="@string/key8" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/key9"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/button_height"
         android:layout_columnWeight="1"
+        android:onClick="appendText"
         android:text="@string/key9" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/division"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/button_height"
         android:layout_columnWeight="1"
+        android:onClick="operators"
+        android:text="@string/division" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/key4"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/button_height"
+        android:layout_columnWeight="1"
+        android:onClick="appendText"
         android:text="@string/key4" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/key5"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/button_height"
         android:layout_columnWeight="1"
+        android:onClick="appendText"
         android:text="@string/key5" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/key6"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/button_height"
         android:layout_columnWeight="1"
+        android:onClick="appendText"
         android:text="@string/key6" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/multiplier"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/button_height"
         android:layout_columnWeight="1"
+        android:onClick="operators"
+        android:text="@string/multiplier" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/key1"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/button_height"
+        android:layout_columnWeight="1"
+        android:onClick="appendText"
         android:text="@string/key1" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/key2"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/button_height"
         android:layout_columnWeight="1"
+        android:onClick="appendText"
         android:text="@string/key2" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/key3"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/button_height"
         android:layout_columnWeight="1"
+        android:onClick="appendText"
         android:text="@string/key3" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/minus"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/button_height"
         android:layout_columnWeight="1"
-        android:text="@string/delete" />
+        android:onClick="operators"
+        android:text="@string/minus" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/plus"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/button_height"
         android:layout_columnWeight="1"
+        android:onClick="operators"
+        android:text="@string/plus" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/key0"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/button_height"
+        android:layout_columnWeight="1"
+        android:onClick="appendText"
         android:text="@string/key0" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/dot"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/button_height"
         android:layout_columnWeight="1"
+        android:onClick="appendText"
         android:text="@string/dot" />
 
-
-    <Button
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/equals"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/button_height"
         android:layout_columnWeight="1"
         android:text="@string/equals" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_columnWeight="1"
-        android:text="@string/plus" />
+
 </GridLayout>
